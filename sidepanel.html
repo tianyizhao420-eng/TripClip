@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TripClip</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div id="app">
+
+    <!-- ── Fixed header ──────────────────────────────────────────────── -->
+    <header id="header">
+      <span class="logo">✈ TripClip</span>
+      <button id="options-btn" title="Settings">⚙</button>
+    </header>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         Zone 1 · Clips
+    ═══════════════════════════════════════════════════════════════════ -->
+    <section id="fragments-zone">
+      <div class="zone-header">
+        <span class="zone-title">Clips</span>
+        <div class="zone-header-actions">
+          <span id="fragment-count">0 clips</span>
+          <button class="collapse-btn" data-zone="fragments-zone" title="Collapse / Expand">▾</button>
+        </div>
+      </div>
+
+      <div class="zone-body">
+        <div id="fragments-list">
+          <p id="no-fragments-msg">
+            Select text on any page, then right-click →
+            <strong>Clip to TripClip</strong> or use the floating ✈ button.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Drag handle 1 (Clips ↕ Chat) ─────────────────────────────── -->
+    <div class="resize-handle" id="handle-fc"
+         data-above="fragments-zone" data-below="chat-zone">
+      <span class="handle-grip"></span>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         Zone 2 · Chat & Planning
+    ═══════════════════════════════════════════════════════════════════ -->
+    <section id="chat-zone">
+      <div class="zone-header">
+        <span class="zone-title">Chat &amp; Planning</span>
+        <button class="collapse-btn" data-zone="chat-zone" title="Collapse / Expand">▾</button>
+      </div>
+
+      <div class="zone-body">
+        <!-- Trip config -->
+        <div id="trip-config">
+          <div class="config-row">
+            <label for="start-date">Start</label>
+            <input type="date" id="start-date">
+            <label for="num-days">Days</label>
+            <input type="number" id="num-days" min="1" max="60" value="7">
+            <button id="build-btn">Build Itinerary</button>
+          </div>
+        </div>
+
+        <!-- Chat messages -->
+        <div id="chat-messages" aria-live="polite"></div>
+
+        <!-- Chat input -->
+        <div id="chat-input-area">
+          <textarea
+            id="chat-input"
+            placeholder="Ask about your clips… or revise the itinerary after it's built."
+            rows="2"
+            aria-label="Chat input"
+          ></textarea>
+          <button id="send-btn" aria-label="Send">Send</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Drag handle 2 (Chat ↕ Itinerary) — hidden until itinerary exists ── -->
+    <div class="resize-handle" id="handle-ci"
+         data-above="chat-zone" data-below="itinerary-zone" hidden>
+      <span class="handle-grip"></span>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         Zone 3 · Itinerary  (hidden until first build)
+    ═══════════════════════════════════════════════════════════════════ -->
+    <section id="itinerary-zone" hidden>
+      <div class="zone-header">
+        <span class="zone-title">Itinerary</span>
+        <div class="zone-header-actions">
+          <button id="export-btn">Export .md</button>
+          <button class="collapse-btn" data-zone="itinerary-zone" title="Collapse / Expand">▾</button>
+        </div>
+      </div>
+
+      <div class="zone-body">
+        <div
+          id="itinerary-content"
+          contenteditable="true"
+          spellcheck="false"
+          aria-label="Generated itinerary"
+        ></div>
+      </div>
+    </section>
+
+  </div><!-- #app -->
+  <script src="sidepanel.js"></script>
+</body>
+</html>
