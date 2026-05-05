@@ -181,45 +181,7 @@ After the itinerary exists, the same chat input becomes a revision interface. Th
 
 ### UI zones (sidebar layout)
 
-```
-┌──────────────────────────────────┐
-│ ✈ TripClip                    ⚙ │  ← fixed header
-├──────────────────────────────────┤
-│ CLIPS                   4 clips ▾│  ← collapsible
-│ ┌──────────────────────────────┐ │
-│ │ Shibuya crossing is most dr… │ │  ← consider (yellow)
-│ │ tripadvisor.com    CONSIDER  │ │
-│ │ ▾ more                       │ │  ← expand full text
-│ ├──────────────────────────────┤ │
-│ │ Ichiran ramen in Shinjuku —  │ │  ← keep (green)
-│ │ tripadvisor.com    KEEP   ↗  │ │
-│ └──────────────────────────────┘ │
-├══════════════════════════════════┤  ← drag handle
-│ CHAT & PLANNING               ▾ │  ← collapsible
-│ Start [2025-06-10] Days [7]      │
-│ [         Build Itinerary      ] │
-│ ┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄ │
-│                  Is Ichiran open │  ← user message
-│               on public holidays?│
-│ [from your clips] The Shinjuku   │  ← assistant reply
-│ branch is open until midnight.   │
-│ [general knowledge] Most ramen   │
-│ shops close on New Year's Day.   │
-│ ┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄ │
-│ Ask about your clips…      [Send]│
-├══════════════════════════════════┤  ← drag handle
-│ ITINERARY          [Export .md]▾ │  ← collapsible
-│ Day 1 — 2025-06-10               │
-│   🚌 Transport                   │
-│     • Shinkansen Tokyo→Kyoto     │
-│   🍜 Food                        │
-│     • Ichiran ramen, Shinjuku    │
-│   🏨 Accommodation               │
-│     • Hotel Gracery Shinjuku     │
-│   🗺 Activities                  │
-│     • Shibuya crossing at dusk   │
-└──────────────────────────────────┘
-```
+<img width="1350" height="1800" alt="IMG_9123 2" src="https://github.com/user-attachments/assets/8bb82d1e-c6e9-448b-998b-d255e01faae2" />
 
 ### Sample chat exchange
 
