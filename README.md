@@ -52,7 +52,7 @@ The result is that **the synthesis step** — turning raw research into a cohere
 |---|---|
 | **Clip** | Select text on any page → clip it to a persistent, source-linked fragment library |
 | **Chat** | Ask the AI questions grounded in your specific clips |
-| **Build & Revise** | Generate a structured JSON itinerary from clips; revise it conversationally |
+| **Build & Revise** | Generate a structured JSON itinerary from clips; revise it |
 
 ### Architecture
 
