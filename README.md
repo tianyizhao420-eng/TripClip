@@ -1,6 +1,7 @@
 # ✈ TripClip
 
 > A Chrome Extension that turns scattered travel research into a structured, AI-generated itinerary — without leaving your browser.
+> Sample video: https://youtu.be/knCrhJQMMgE?si=6whO8ivf-apaTaqZ
 
 ---
 
